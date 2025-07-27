@@ -11,11 +11,14 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
 
-const repo = 'ten-repo-cua-ban';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  output: 'export',
+  basePath: '/studio-js',
+  images: {
+    unoptimized: true, 
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
